@@ -12,16 +12,19 @@ $(document).ready(function () {
 		goPlay: function goPlay() {
 			$('section').hide();
 			$('#playScreen').show();
+			$('nav').show();
 		},
 
 		myLeaderBoard: function myLeaderBoard() {
 			$('section').hide();
 			$('#leaderBoardScreen').show();
+			$('nav').show();
 		},
 
 		mySettings: function mySettings() {
 			$('section').hide();
 			$('#settingsScreen').show();
+			$('nav').show();
 		}
 	});
 
@@ -30,13 +33,13 @@ $(document).ready(function () {
 	$('#loading').show();
 
 	setTimeout(function () {
-		$('#loading').hide();
 		$('nav').show();
+		r.navigate('play', { trigger: true });
 	}, 4000);
-});
 
-var r = new Router();
-Backbone.history.start();
+	var r = new Router();
+	Backbone.history.start();
+});
 
 },{}]},{},[1])
 

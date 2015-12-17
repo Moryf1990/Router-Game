@@ -11,16 +11,19 @@ $(document).ready(function() {
 		goPlay: function() {
 			$('section').hide();
 			$('#playScreen').show();
+			$('nav').show();
 		},
 
 		myLeaderBoard: function() {
 			$('section').hide();
 			$('#leaderBoardScreen').show();
+			$('nav').show();
 		},
 
 		mySettings: function() {
 			$('section').hide();
 			$('#settingsScreen').show();
+			$('nav').show();
 		},
 	});
 
@@ -29,11 +32,11 @@ $(document).ready(function() {
 	$('#loading').show();
 
 	setTimeout(function() {
-		$('#loading').hide();
 		$('nav').show();
+		r.navigate('play', { trigger: true });
 	}, 4000);
-});
 
 var r = new Router();
 Backbone.history.start();
 
+});
